@@ -1,9 +1,9 @@
 import UIKit
 
-typealias TurboNativeConformable = TurboNativeRefreshable & PathConfigurationIdentifiable
+public typealias TurboNativeConformable = TurboNativeRefreshable & PathConfigurationIdentifiable
 
 /// Allows TurboNavigator to notify native view controllers to refresh their content.
-protocol TurboNativeRefreshable {
+public protocol TurboNativeRefreshable {
     func refresh()
 }
 
