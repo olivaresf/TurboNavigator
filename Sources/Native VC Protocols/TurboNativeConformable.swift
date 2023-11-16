@@ -1,5 +1,12 @@
 import UIKit
 
+public typealias TurboNativeConformable = TurboNativeRefreshable & PathConfigurationIdentifiable
+
+/// Allows TurboNavigator to notify native view controllers to refresh their content.
+public protocol TurboNativeRefreshable {
+    func refresh()
+}
+
 /// As a convenience, your view controller may conform to `PathConfigurationIdentifiable`.
 /// You may then use the view controller's `pathConfigurationIdentifier` property instead of `proposal.url` when deciding how to handle a proposal. See `VisitProposal.viewController` on how to use this in your configuration file.
 ///

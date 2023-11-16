@@ -202,13 +202,16 @@ public class TurboNavigator {
             if modalNavigationController.viewControllers.count == 1 {
                 navigationController.dismiss(animated: true)
                 session.reload()
+                navigationController.refreshNativeTopViewController()
             } else {
                 modalNavigationController.popViewController(animated: true)
                 modalSession.reload()
+                modalNavigationController.refreshNativeTopViewController()
             }
         } else {
             navigationController.popViewController(animated: true)
             session.reload()
+            navigationController.refreshNativeTopViewController()
         }
     }
 
